@@ -48,13 +48,16 @@ function showNextReason() {
   }, 50);
 }
 
-// 💌 Modal Control
+// Modal Controls
 function closeLetter() {
   document.getElementById("letter-modal").style.display = "none";
-  document.getElementById("main-content").classList.remove("hidden");
+  document.getElementById("main-content").style.display = "block";
 }
 
 function openLetter() {
   document.getElementById("letter-modal").style.display = "flex";
-  document.getElementById("main-content").classList.add("hidden");
+  document.getElementById("main-content").style.display = "none";
 }
+
+// Auto show the letter on first load
+window.onload = openLetter;
