@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reasons Why I Love You</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- 💌 Letter Modal -->
   <div id="letter-modal" class="modal">
     <div class="modal-content">
       <h2>Hi, Love 💌</h2>
       <p>Before anything else, I want you to know...</p>
       <p>You're the most amazing person I've ever met. This little page is my way of showing just a piece of how much you mean to me.</p>
-      <p>I love you, always and forever.</p>
+      <p>I know life gets busy and overwhelming sometimes, but always remember that I’m here, loving you in every moment, in every way I can.</p>
+      <p>You deserve to feel special, because you truly are. Every little reason I wrote here came from the way you’ve touched my life.</p>
+      <p>Read them slowly, smile a little, and know that someone out here is deeply, madly, and genuinely in love with you.</p>
+      <p>Always yours, <br><strong>JM 🫶</strong></p>
       <button onclick="closeLetter()">Close</button>
     </div>
   </div>
@@ -28,7 +30,7 @@
       <p class="question">Wanna know why you're special?</p>
 
       <div id="reason-box" class="reason-box">
-        <span id="typing-text">...</span>
+        <span id="typing-text" class="loading">...</span>
       </div>
 
       <div class="controls">
@@ -40,7 +42,9 @@
     <footer>Made with ❤️ by JM</footer>
   </div>
 
+  <!-- 🎵 Music -->
   <audio id="bg-music" src="love.mp3" loop></audio>
+
   <script src="script.js"></script>
 </body>
 </html>
