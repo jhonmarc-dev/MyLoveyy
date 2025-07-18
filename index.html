@@ -7,28 +7,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Letter Modal -->
-  <div id="letter-modal" class="letter-modal">
-    <div class="letter-content slide-in">
-      <h2>Before anything else, I want you to know...</h2>
-      <p>
-        You're the most amazing person I've ever met. This little page is my way of showing just a piece of how much you mean to me.<br><br>
-        I made this because I wanted you to smile today—and to remind you how special you are to me. You're my safe place, my inspiration, and the one I always think about. Click the button below and start seeing all the reasons why I love you, one by one. 💖
-      </p>
-      <div class="modal-buttons">
-        <button onclick="closeLetter()">Start Reading Reasons</button>
-        <button onclick="openLetter()">Read Again</button>
-      </div>
+  <!-- 💌 Letter Modal -->
+  <div id="letter-modal" class="modal">
+    <div class="modal-content">
+      <h2>Hi, Love 💌</h2>
+      <p>Before anything else, I want you to know...</p>
+      <p>You're the most amazing person I've ever met. This little page is my way of showing just a piece of how much you mean to me.</p>
+      <p>I know life gets busy and overwhelming sometimes, but always remember that I’m here, loving you in every moment, in every way I can.</p>
+      <p>You deserve to feel special, because you truly are. Every little reason I wrote here came from the way you’ve touched my life.</p>
+      <p>Read them slowly, smile a little, and know that someone out here is deeply, madly, and genuinely in love with you.</p>
+      <p>Always yours, <br><strong>JM 🫶</strong></p>
+      <button onclick="closeLetter()">Close</button>
     </div>
   </div>
 
-  <!-- Main Content -->
+  <!-- 🌸 Main Content -->
   <div id="main-content" class="hidden">
     <div class="background"></div>
 
     <main class="card">
-      <img src="us.jpg" alt="Us" class="top-photo"/>
       <h1 class="title">Reasons Why I Love You</h1>
       <p class="question">Wanna know why you're special?</p>
 
@@ -38,13 +35,14 @@
 
       <div class="controls">
         <button onclick="showNextReason()">Show Me a Reason</button>
+        <button onclick="openLetter()">Read the Letter Again 💌</button>
       </div>
     </main>
 
-    <footer class="footer">Made with ❤️ by JM</footer>
+    <footer>Made with ❤️ by JM</footer>
   </div>
 
-  <!-- Background music -->
+  <!-- 🎵 Music -->
   <audio id="bg-music" src="love.mp3" loop></audio>
 
   <script src="script.js"></script>
