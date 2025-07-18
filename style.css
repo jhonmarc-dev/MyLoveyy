@@ -99,13 +99,15 @@ body {
   margin: 40px auto;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .us-photo {
   width: 100%;
-  max-height: 220px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   margin-bottom: 20px;
 }
 
