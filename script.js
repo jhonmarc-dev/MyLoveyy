@@ -48,7 +48,6 @@ function showNextReason() {
   }, 50);
 }
 
-// 💌 Modal Control
 function closeLetter() {
   document.getElementById("letter-modal").style.display = "none";
   document.getElementById("main-content").classList.remove("hidden");
@@ -58,8 +57,3 @@ function openLetter() {
   document.getElementById("letter-modal").style.display = "flex";
   document.getElementById("main-content").classList.add("hidden");
 }
-
-// Show modal on first load
-window.onload = () => {
-  document.getElementById("letter-modal").style.display = "flex";
-};
