@@ -40,6 +40,12 @@ body {
   align-items: center;
   z-index: 10;
   padding: 20px;
+  transition: opacity 0.4s ease;
+}
+
+.modal[style*="display: none"] {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .letter {
@@ -90,7 +96,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: auto;
+  margin: 40px auto;
   position: relative;
   z-index: 1;
 }
@@ -135,6 +141,7 @@ button {
   border-radius: 50px;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-top: 10px;
 }
 
 button:hover {
