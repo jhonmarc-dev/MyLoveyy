@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reasons Why I Love You</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="background"></div>
 
-  <main class="card">
-    <img src="us.jpg" alt="Us together" class="love-photo" />
-    <h1 class="title">Reasons Why I Love You</h1>
-    <p class="question">Wanna know why you're special?</p>
-
-    <div id="reason-box" class="reason-box">
-      <span id="typing-text" class="loading">...</span>
+  <!-- 💌 Letter Modal -->
+  <div id="letter-modal" class="modal">
+    <div class="modal-content">
+      <h2>Hi, Love 💌</h2>
+      <p>Before anything else, I want you to know...</p>
+      <p>You're the most amazing person I've ever met. This little page is my way of showing just a piece of how much you mean to me.</p>
+      <p>I love you, always and forever.</p>
+      <button onclick="closeLetter()">Close</button>
     </div>
+  </div>
 
-    <div class="controls">
-      <button onclick="showNextReason()">Show Me a Reason</button>
-    </div>
-  </main>
+  <!-- 🌸 Main Content -->
+  <div id="main-content">
+    <div class="background"></div>
+
+    <main class="card">
+      <h1 class="title">Reasons Why I Love You</h1>
+      <p class="question">Wanna know why you're special?</p>
+
+      <div id="reason-box" class="reason-box">
+        <span id="typing-text">...</span>
+      </div>
+
+      <div class="controls">
+        <button onclick="showNextReason()">Show Me a Reason</button>
+      </div>
+    </main>
+
+    <footer>Made with ❤️ by JM</footer>
+  </div>
 
   <audio id="bg-music" src="love.mp3" loop></audio>
-
-  <footer>Made with ❤️ by JM</footer>
   <script src="script.js"></script>
 </body>
 </html>
