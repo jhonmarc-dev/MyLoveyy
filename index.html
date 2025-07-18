@@ -4,46 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reasons Why I Love You</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body onload="openLetter()">
+  <div class="background"></div>
+
   <!-- 💌 Letter Modal -->
-  <div id="letter-modal" class="modal">
-    <div class="modal-content">
-      <h2>Hi, Love 💌</h2>
-      <p>Before anything else, I want you to know...</p>
-      <p>You're the most amazing person I've ever met. This little page is my way of showing just a piece of how much you mean to me.</p>
-      <p>I know life gets busy and overwhelming sometimes, but always remember that I’m here, loving you in every moment, in every way I can.</p>
-      <p>You deserve to feel special, because you truly are. Every little reason I wrote here came from the way you’ve touched my life.</p>
-      <p>Read them slowly, smile a little, and know that someone out here is deeply, madly, and genuinely in love with you.</p>
-      <p>Always yours, <br><strong>JM 🫶</strong></p>
-      <button onclick="closeLetter()">Close</button>
+  <div id="letter-modal" class="letter-modal">
+    <div class="letter-content">
+      <h2>Before anything else, I want you to know...</h2>
+      <p>
+        You're the most amazing person I've ever met. This little page is my way of showing just a piece of how much you mean to me.<br><br>
+        I may not always find the perfect words to say it, but I hope this shows how deeply I care for you. Always and forever, mahal kita. 🤍
+      </p>
+      <button onclick="closeLetter()">Read Reasons</button>
     </div>
   </div>
 
-  <!-- 🌸 Main Content -->
-  <div id="main-content" class="hidden">
-    <div class="background"></div>
+  <!-- 💕 Main Content -->
+  <main id="main-content" class="card hidden">
+    <img src="us.jpg" alt="Us" class="us-image"/>
+    <h1 class="title">Reasons Why I Love You</h1>
+    <p class="question">Wanna know why you're special?</p>
 
-    <main class="card">
-      <h1 class="title">Reasons Why I Love You</h1>
-      <p class="question">Wanna know why you're special?</p>
+    <div id="reason-box" class="reason-box">
+      <span id="typing-text" class="loading">...</span>
+    </div>
 
-      <div id="reason-box" class="reason-box">
-        <span id="typing-text" class="loading">...</span>
-      </div>
+    <div class="controls">
+      <button onclick="showNextReason()">Show Me a Reason</button>
+    </div>
+  </main>
 
-      <div class="controls">
-        <button onclick="showNextReason()">Show Me a Reason</button>
-        <button onclick="openLetter()">Read the Letter Again 💌</button>
-      </div>
-    </main>
-
-    <footer>Made with ❤️ by JM</footer>
-  </div>
-
-  <!-- 🎵 Music -->
+  <!-- 🎵 Background Music -->
   <audio id="bg-music" src="love.mp3" loop></audio>
+
+  <!-- Footer -->
+  <footer>Made with ❤️ by JM</footer>
 
   <script src="script.js"></script>
 </body>
