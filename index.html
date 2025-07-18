@@ -4,33 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reasons Why I Love You</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="background"></div>
 
-  <!-- 💌 Modal Love Letter -->
-  <div id="letter-modal" class="modal">
-    <div class="modal-content">
-      <h2>My Love Letter for You 💌</h2>
-      <p>
-        Hi love,  
-        <br/><br/>
-        I just want to remind you how much you mean to me.  
-        You’ve brought so much joy, calm, and love into my life.  
-        This site is just a tiny piece of how I feel.  
-        You’re special, and I’ll never stop reminding you.  
-        I hope this makes you smile today.  
-        <br/><br/>
-        Love,  
-        JM 💗
-      </p>
-      <button onclick="closeLetter()">Close Letter</button>
-    </div>
-  </div>
-
-  <!-- 🌸 Main Card -->
-  <main class="card hidden" id="main-content">
+  <main class="card">
+    <img src="us.jpg" alt="Us together" class="love-photo" />
     <h1 class="title">Reasons Why I Love You</h1>
     <p class="question">Wanna know why you're special?</p>
 
@@ -43,15 +23,9 @@
     </div>
   </main>
 
-  <!-- 🎵 Background Music -->
   <audio id="bg-music" src="love.mp3" loop></audio>
 
-  <!-- ❤️ Footer -->
   <footer>Made with ❤️ by JM</footer>
-
-  <!-- 🔁 Reopen Letter Button -->
-  <button id="reopen-letter" onclick="openLetter()">📜 Read Letter Again</button>
-
   <script src="script.js"></script>
 </body>
 </html>
