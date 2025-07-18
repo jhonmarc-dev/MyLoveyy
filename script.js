@@ -19,9 +19,8 @@ function showNextReason() {
   const box = document.getElementById("typing-text");
   const music = document.getElementById("bg-music");
 
-  if (isTyping) return; // prevent click while still typing
+  if (isTyping) return;
 
-  // Start music on first click
   if (!musicStarted) {
     music.play().catch(err => console.log("Autoplay blocked:", err));
     musicStarted = true;
@@ -47,4 +46,15 @@ function showNextReason() {
       isTyping = false;
     }
   }, 50);
+}
+
+// 💌 Modal Control
+function closeLetter() {
+  document.getElementById("letter-modal").style.display = "none";
+  document.getElementById("main-content").classList.remove("hidden");
+}
+
+function openLetter() {
+  document.getElementById("letter-modal").style.display = "flex";
+  document.getElementById("main-content").classList.add("hidden");
 }
