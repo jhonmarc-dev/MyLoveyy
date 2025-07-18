@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffd5ec, #ffe3f3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.background {
+  display: none; /* Hide broken background */
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #ff4f96;
+  margin-bottom: 10px;
+}
+
+.question {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.reason-box {
+  font-size: 1.5rem;
+  color: #d6336c;
+  min-height: 80px;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #ff7aa2;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff508a;
+}
+
+footer {
+  margin-top: 30px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
