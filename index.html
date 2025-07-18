@@ -4,43 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reasons Why I Love You</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body onload="openLetter()">
-  <div class="background"></div>
+<body>
 
-  <!-- 💌 Letter Modal -->
+  <!-- Letter Modal -->
   <div id="letter-modal" class="letter-modal">
-    <div class="letter-content">
+    <div class="letter-content slide-in">
       <h2>Before anything else, I want you to know...</h2>
       <p>
         You're the most amazing person I've ever met. This little page is my way of showing just a piece of how much you mean to me.<br><br>
-        I may not always find the perfect words to say it, but I hope this shows how deeply I care for you. Always and forever, mahal kita. 🤍
+        I made this because I wanted you to smile today—and to remind you how special you are to me. You're my safe place, my inspiration, and the one I always think about. Click the button below and start seeing all the reasons why I love you, one by one. 💖
       </p>
-      <button onclick="closeLetter()">Read Reasons</button>
+      <button onclick="closeLetter()">Start Reading Reasons</button>
     </div>
   </div>
 
-  <!-- 💕 Main Content -->
-  <main id="main-content" class="card hidden">
-    <img src="us.jpg" alt="Us" class="us-image"/>
-    <h1 class="title">Reasons Why I Love You</h1>
-    <p class="question">Wanna know why you're special?</p>
+  <!-- Main Content -->
+  <div id="main-content" class="hidden">
+    <div class="background"></div>
 
-    <div id="reason-box" class="reason-box">
-      <span id="typing-text" class="loading">...</span>
-    </div>
+    <main class="card">
+      <img src="us.jpg" alt="Us" class="top-photo"/>
+      <h1 class="title">Reasons Why I Love You</h1>
+      <p class="question">Wanna know why you're special?</p>
 
-    <div class="controls">
-      <button onclick="showNextReason()">Show Me a Reason</button>
-    </div>
-  </main>
+      <div id="reason-box" class="reason-box">
+        <span id="typing-text" class="loading">...</span>
+      </div>
 
-  <!-- 🎵 Background Music -->
+      <div class="controls">
+        <button onclick="showNextReason()">Show Me a Reason</button>
+      </div>
+    </main>
+
+    <footer class="footer">Made with ❤️ by JM</footer>
+  </div>
+
+  <!-- Background music -->
   <audio id="bg-music" src="love.mp3" loop></audio>
-
-  <!-- Footer -->
-  <footer>Made with ❤️ by JM</footer>
 
   <script src="script.js"></script>
 </body>
