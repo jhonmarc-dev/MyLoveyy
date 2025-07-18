@@ -12,9 +12,21 @@ const reasons = [
 ];
 
 let index = 0;
+let musicStarted = false;
 
 function showNextReason() {
   const box = document.getElementById("typing-text");
+  const music = document.getElementById("bg-music");
+
+  // Start background music on first click
+  if (!musicStarted) {
+    music.play().catch(err => {
+      console.log("Music blocked until interaction:", err);
+    });
+    musicStarted = true;
+  }
+
+  // If we’ve shown all the reasons
   if (index >= reasons.length) {
     box.textContent = "That's not even half of it 😘";
     return;
@@ -26,7 +38,7 @@ function showNextReason() {
 
   const typer = setInterval(() => {
     if (charIndex < reason.length) {
-      box.textContent += reason[charIndex];
+      box.textContent += reason.charAt(charIndex);
       charIndex++;
     } else {
       clearInterval(typer);
