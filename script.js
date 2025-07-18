@@ -13,20 +13,20 @@ const reasons = [
 
 let index = 0;
 let musicStarted = false;
+let isTyping = false;
 
 function showNextReason() {
   const box = document.getElementById("typing-text");
   const music = document.getElementById("bg-music");
 
-  // Start background music on first click
+  if (isTyping) return; // prevent click while still typing
+
+  // Start music on first click
   if (!musicStarted) {
-    music.play().catch(err => {
-      console.log("Music blocked until interaction:", err);
-    });
+    music.play().catch(err => console.log("Autoplay blocked:", err));
     musicStarted = true;
   }
 
-  // If we’ve shown all the reasons
   if (index >= reasons.length) {
     box.textContent = "That's not even half of it 😘";
     return;
@@ -35,6 +35,7 @@ function showNextReason() {
   const reason = reasons[index];
   box.textContent = "";
   let charIndex = 0;
+  isTyping = true;
 
   const typer = setInterval(() => {
     if (charIndex < reason.length) {
@@ -43,6 +44,7 @@ function showNextReason() {
     } else {
       clearInterval(typer);
       index++;
+      isTyping = false;
     }
   }, 50);
 }
